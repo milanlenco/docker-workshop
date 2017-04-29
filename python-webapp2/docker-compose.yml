@@ -1,0 +1,11 @@
+webapp:
+    build: .
+    ports:
+        - "5000:5000"
+    volumes:
+        - ./app:/app
+    links:
+        - redis
+
+redis:
+    image: redis:3.0
